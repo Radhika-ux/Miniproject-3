@@ -1,0 +1,35 @@
+<div class="row header">
+    <div class="col-12">
+        <button class="btn btn-success login-button" routerLink="/">Back to RegisterForm</button>
+        <h5>{{displayEmail}}</h5>
+    </div>
+</div>
+<div class="row body">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12">
+                <h5>Login Form</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 login-form">
+                <form [formGroup]="loginForm">
+                    <div>
+                        <input type="text" formControlName="email" placeholder="Email Id">
+                        <p *ngIf="email.touched && email.invalid">Please Enter Your Email Id</p>
+                    </div>
+                    <div>
+                        <input type="password" formControlName="password" placeholder="Password">
+                        <p *ngIf="password.touched && password.invalid">Please Enter Your Password</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" type="submit" (click)="submitForm()"
+                            [disabled]="!loginForm.valid">Subumit</button>
+                            <button class="btn btn-primary claer" type="reset">Crear</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

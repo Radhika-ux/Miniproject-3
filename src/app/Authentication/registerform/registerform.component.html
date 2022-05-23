@@ -1,0 +1,59 @@
+<div class="row body">
+    <div class="col-12">
+        <div class="row header">
+            <div class="col-12">
+                <h5>Registration Form</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 login-form">
+                <form [formGroup]=" registerForm">
+                    <div>
+                        <input type="text" formControlName="firstname" placeholder="First Name">
+                        <p *ngIf="firstname.touched && firstname.invalid">Please Enter Your First Name</p>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="lastname" placeholder="Last Name">
+                        <p *ngIf="lastname.touched && lastname.invalid">Please Enter Your Last Name</p>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="email" placeholder="Email Id">
+                        <p *ngIf="email.touched && email.invalid">Please Enter Your Email Id</p>
+                    </div>
+                    <div>
+                        <input type="password" formControlName="password" placeholder="Password">
+                        <p *ngIf="password.touched && password.invalid">Please Enter Your Password</p>
+                    </div>
+                    <div>
+                        <input type="password" formControlName="repassword" placeholder="Confirm Password">
+                        <p *ngIf="repassword.touched && repassword.invalid">Please Enter Your Confirm Password</p>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="phonenumber" placeholder="Phone Number">
+                        <p *ngIf="phonenumber.touched && phonenumber.invalid">Please Enter Your Phone Number</p>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="street" placeholder="Street">
+                        <p *ngIf="street.touched && street.invalid">Please Enter Your Street</p>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="place" placeholder="Place">
+                        <p *ngIf="place.touched && place.invalid">Please Enter Your Place</p>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="city" placeholder="City">
+                        <p *ngIf="city.touched && city.invalid">Please Enter Your City</p>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="state" placeholder="State">
+                        <p *ngIf="state.touched && state.invalid">Please Enter Your State</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" type="submit" (click)="submitForm()"
+                            [disabled]="!registerForm.valid">Subumit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
