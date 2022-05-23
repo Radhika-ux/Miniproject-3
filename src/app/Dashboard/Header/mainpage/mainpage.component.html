@@ -1,0 +1,51 @@
+<div class="row heade">
+    <div class="col-2">
+        <button class="btn btn-primary back-to-header" routerLink="/header">Back to Header</button>
+    </div>
+    <div class="col-6">
+        <h5>Currency Converstion</h5>
+    </div>
+    <div class="col-4">
+        <select name="" id="" (change)="selectChange($event)" >
+            <option value="" selected hidden>Select the Currency</option>
+            <option value="US_Dollars">US Dollars</option>
+            <option value="Euro">Euro</option>
+            <option value="British_Pound">British Pound</option>
+            <option value="Australian_Dollars">Australian Dollars</option>
+            <option value="UAE_Dirham">UAE Dirham</option>
+        </select>
+    </div>
+</div>
+<div class="row body">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-4 login-form">
+                <input type="number" [(ngModel)]="value" placeholder="Enter INR" class="inr-input">
+                <div><button class="btn btn-primary submitbt" (click)="convertion()">Convert</button></div>
+                <label for="">Converted Currency Value:</label>
+                <span>{{converted}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
